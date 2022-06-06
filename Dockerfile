@@ -2,6 +2,7 @@ FROM mcr.microsoft.com/powershell:ubuntu-20.04
 
 EXPOSE 80
 
+ENV ENV_ROUTE="api"
 ENV ENV_PUSHOVER_URL="https://api.pushover.net/1/messages.json"
 ENV ENV_PUSHOVER_USER="1234567890"
 ENV ENV_PUSHOVER_TOKEN="1234567890"

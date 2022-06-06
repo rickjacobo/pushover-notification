@@ -22,10 +22,12 @@ if ($Request.Url -match '/end$') {
 else {
 
 # Split request URL to get command and options
-$RequestVars = ([String]$Request.Url).split("/");       
+$RequestVars = ([String]$Request.Url).split("/");
+$ApiRoute = $Env:ENV_ROUTE  
 $Route = $RequestVars[3]
 
-if ($Route -eq "api") {
+
+if ($Route -eq "$ApiRoute") {
 $RouteInput = $RequestVars[4]
 $Body = pwsh /powershell/powershell.ps1 -RouteInput $RouteInput
 $Message = $Body
