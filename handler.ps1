@@ -1,7 +1,7 @@
 
-# Create a listener on port 3000
+# Create a listener on port 80
 $Listener = New-Object System.Net.HttpListener
-$Listener.Prefixes.Add('http://+:3000/') 
+$Listener.Prefixes.Add('http://+:80/') 
 $Listener.Start()
 'Listening ...'
 
