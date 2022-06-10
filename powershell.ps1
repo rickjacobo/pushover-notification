@@ -23,7 +23,7 @@ Invoke-WebRequest -Uri $PushoverURL/$Message -Method POST
 # Begin handler response
 & $CustomCode | Out-Null
 $JSON = @"
-{"status": request submitted}
+{   "status": "request submitted" }
 "@
 $JSON
 # End handler response
